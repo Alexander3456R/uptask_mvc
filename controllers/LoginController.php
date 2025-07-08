@@ -32,29 +32,42 @@ class LoginController {
         ]);
     }
 
-    public static function olvide() {
-        echo 'Desde Olvide';
-
+    public static function olvide(Router $router) {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         }
+
+        // Muestra la vista
+        $router->render('auth/olvide', [
+            'titulo' => 'Olvidé Contraseña'
+        ]);
     }
 
     
-    public static function reestablecer() {
-        echo 'Desde Reestablecer';
+    public static function reestablecer(Router $router) {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         }
+
+        // Muestra la vista
+        $router->render('auth/reestablecer', [
+            'titulo' => 'Reestablecer Contraseña'
+        ]);
     }
 
-    public static function mensaje() {
-        echo 'Desde Mensaje';
+    public static function mensaje(Router $router) {
+        // Muestra la vista
+        $router->render('auth/mensaje', [
+            'titulo' => 'Mensaje'
+        ]);
     }
 
 
-    public static function confirmar() {
-        echo 'Desde Confirmar';
+    public static function confirmar(Router $router) {
+        // Muestra la vista
+        $router->render('auth/confirmar', [
+            'titulo' => 'Confirmar Cuenta'
+        ]);
     }
 }
