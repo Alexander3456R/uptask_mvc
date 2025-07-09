@@ -49,4 +49,15 @@ class Usuario extends ActiveRecord {
         }
         return self::$alertas;
     }
+
+    // Hashea el password
+    public function hashPassword() {
+        $this->password = password_hash($this->password, PASSWORD_BCRYPT);
+    }
+
+    // Generar un token
+
+    public function crearToken() {
+        $this->token = uniqid();
+    }
 }
