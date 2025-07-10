@@ -4,6 +4,9 @@
     <div class="contenedor-sm">
         <p class="descripcion-pagina">Llena el siguiente formulario para reestablecer la contraseña</p>
 
+        <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
+
+
         <form action="/olvide" class="formulario" method="POST">
             <div class="campo">
                 <label for="email">Email</label>

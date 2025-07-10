@@ -1,0 +1,1 @@
+Swal.fire({title:"¡Proyecto creado correctamente!",icon:"success",confirmButtonText:"Ir al proyecto"}).then(()=>{window.location.href="/proyecto?id=<?php echo $urlProyecto; ?>"});
