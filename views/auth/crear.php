@@ -55,7 +55,7 @@
 
         <div class="acciones">
             <a href="/">¿Ya tienes una cuenta? Inicia sesión!</a>
-            <a href="/olvide">Olvidé Contraseña</a>
+            <a href="/olvide">¿Olvidaste la Contraseña?</a>
         </div>
   </div>    <!-- contenedor sm -->
 </div>

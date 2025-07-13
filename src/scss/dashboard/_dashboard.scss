@@ -11,6 +11,7 @@
 
     .principal {
         flex: 1;
+        overflow: auto;
     }
 
     .contenido {
@@ -28,10 +29,17 @@
         }
         input[type="submit"] {
             @include m.boton(v.$indigo, v.$blanco);
-            padding: 1rem;
+            padding: 1.5rem 4rem;
             text-transform: uppercase;
             font-weight: bold;
             font-size: 1.4rem;
+        }
+    }
+
+    .enlace {
+        color: v.$indigo;
+        &:hover {
+            color: darken(v.$indigo, 20%);
         }
     }
 }

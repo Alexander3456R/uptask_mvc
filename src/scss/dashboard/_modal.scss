@@ -43,10 +43,14 @@
         .submit-nueva-tarea {
             @include m.boton(v.$indigo, v.$blanco);
            
+
         }
 
         .cerrar-modal {
             @include m.boton(v.$naranja, v.$blanco);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            
             
         }
 
@@ -60,6 +64,12 @@
         &.cerrar {
             transform: translateY(-200%);
             opacity: 0;
+        }
+
+        .submit-nueva-tarea:disabled,
+        .cerrar-modal:disabled {
+            background-color: #CCCCCC; /* Color de fondo cuando está deshabilitado */
+            pointer-events: none;
         }
     }
 }

@@ -31,7 +31,7 @@
 
         <div class="acciones">
             <a href="/crear">¿Aún no tienes una cuenta? Crea una!</a>
-            <a href="/olvide">Olvidé Contraseña</a>
+            <a href="/olvide">¿Olvidaste la Contraseña?</a>
         </div>
   </div>    <!-- contenedor sm -->
 </div>
