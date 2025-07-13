@@ -58,6 +58,28 @@ class DashboardController {
         ]);
     }
 
+    public static function eliminar_proyecto() {
+    session_start();
+    isAuth();
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $token = $_POST['id'] ?? null;
+        if(!$token) {
+            header('Location: /dashboard');
+            exit;
+        }
+        $proyecto = Proyecto::where('url', $token);
+        if($proyecto && $proyecto->propietarioid === $_SESSION['id']) {
+            $proyecto->eliminar();
+            header('Location: /dashboard?eliminado=1');
+            exit;
+        } else {
+            header('Location: /dashboard');
+            exit;
+        }
+    }
+}
+
     public static function proyecto(Router $router) {
         session_start();
         isAuth();

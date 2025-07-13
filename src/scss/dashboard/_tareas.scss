@@ -2,11 +2,20 @@
 @use 'base/mixins' as m;
 
 .contenedor-nueva-tarea {
-    display: flex;
-    justify-content: center;
+    display: block;
+    @include m.tablet{
+       display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
 
     .agregar-tarea {
         @include m.boton(v.$cyan, v.$blanco)
+    }
+
+    .eliminar-proyecto {
+        @include m.boton(v.$rojo, v.$blanco)
     }
 }
 

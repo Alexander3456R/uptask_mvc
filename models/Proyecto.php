@@ -26,4 +26,16 @@ class Proyecto extends ActiveRecord {
         }
         return self::$alertas;
     }
+
+ public function eliminar() {
+    // Elimina las tareas asociadas a este proyecto
+    $tareas = \Model\Tarea::belongsTo('proyectoid', $this->id);
+    if($tareas) {
+        foreach($tareas as $tarea) {
+            $tarea->eliminar(); // <-- Ya es objeto, no necesitas new
+        }
+    }
+    // Ahora elimina el proyecto
+    parent::eliminar();
+}
 }
